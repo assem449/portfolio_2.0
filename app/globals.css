@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 198 93% 60%;
+    --primary-foreground: 198 100% 98%;
+    --secondary: 198 100% 95%;
+    --secondary-foreground: 198 93% 30%;
+    --muted: 198 100% 95%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 198 100% 95%;
+    --accent-foreground: 198 93% 30%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 198 100% 90%;
+    --input: 198 100% 90%;
+    --ring: 198 93% 60%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 198 93% 60%;
+    --primary-foreground: 198 100% 98%;
+    --secondary: 198 100% 15%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 198 100% 15%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 198 100% 15%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 198 100% 15%;
+    --input: 198 100% 15%;
+    --ring: 198 93% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.floating-star {
+  animation: float 20s linear infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+
