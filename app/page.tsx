@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { Github, Linkedin, Mail, ChevronDown, Star } from "lucide-react"
+import { Github, Linkedin, Mail, ChevronDown, Star, FileText } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
@@ -516,84 +516,40 @@ export default function Home() {
                       </a>
                     </div>
                   </div>
-
-                  {/* <div className="absolute bottom-8 left-8 right-8">
-                    <div className="flex space-x-4">
-                      <motion.a
-                        href="https://github.com/assem449"
-                        target="_blank"
-                        whileHover={{ y: -5 }}
-                        className="bg-white/20 p-2 rounded-full hover:bg-white/30 transition-colors"
-                        rel="noreferrer"
-                      >
-                        <Github className="h-5 w-5" />
-                      </motion.a>
-                      <motion.a
-                        href="https://www.linkedin.com/in/assemmalgazhdarova/"
-                        target="_blank"
-                        whileHover={{ y: -5 }}
-                        className="bg-white/20 p-2 rounded-full hover:bg-white/30 transition-colors"
-                        rel="noreferrer"
-                      >
-                        <Linkedin className="h-5 w-5" />
-                      </motion.a>
-                      <motion.a
-                        href="mailto:assem4491@gmail.com"
-                        whileHover={{ y: -5 }}
-                        className="bg-white/20 p-2 rounded-full hover:bg-white/30 transition-colors"
-                      >
-                        <Mail className="h-5 w-5" />
-                      </motion.a>
-                    </div>
-                  </div> */}
                 </div>
+                <CardContent className="p-8 flex flex-col justify-center">
+                  <h3 className="text-xl font-bold text-sky-700 mb-6">Connect With Me</h3>
 
-                <CardContent className="p-8">
-                  <form className="space-y-4">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                        Name
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
-                        placeholder="Your name"
-                      />
+                  <div className="grid grid-cols-1 gap-4">
+                    <Button
+                      asChild
+                      className="w-full bg-sky-500 hover:bg-sky-600 text-white flex justify-center items-center h-12"
+                    >
+                      <a href="/resume.pdf" download>
+                        <FileText className="mr-2 h-5 w-5" /> Download Resume
+                      </a>
+                    </Button>
+
+                    <Button
+                      asChild
+                      variant="outline"
+                      className="w-full border-sky-400 text-sky-600 hover:bg-sky-50 flex justify-center items-center h-12"
+                    >
+                      <a href="https://www.linkedin.com/in/assemmalgazhdarova/" target="_blank" rel="noopener noreferrer">
+                        <Linkedin className="mr-2 h-5 w-5" /> Connect on LinkedIn
+                      </a>
+                    </Button>
+
+                    <div className="mt-6 text-center text-gray-500 text-sm">
                     </div>
-
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                        Email
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
-                        placeholder="Your email"
-                      />
-                    </div>
-
-                    <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                        Message
-                      </label>
-                      <textarea
-                        id="message"
-                        rows={5}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
-                        placeholder="Your message"
-                      ></textarea>
-                    </div>
-
-                    <Button className="w-full bg-sky-500 hover:bg-sky-600 text-white">Send Message</Button>
-                  </form>
+                  </div>
                 </CardContent>
               </div>
             </Card>
           </div>
         </div>
       </section>
+
 
       {/* Footer */}
       <footer className="py-8 bg-sky-900 text-white">
